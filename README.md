@@ -44,7 +44,7 @@ docker run --rm \
 
 ### Docker Compose
 
-The included `docker-compose.yml` starts MongoDB (replica set), Kafka, and the CDC consumer:
+The included `docker-compose.yml` starts MongoDB (replica set), Kafka, Kafka UI, and the CDC consumer:
 
 ```bash
 docker compose up -d
@@ -53,6 +53,7 @@ docker compose up -d
 This starts:
 - **MongoDB 7** on port 27017 (auto-initializes replica set `rs0`)
 - **Kafka 3.7** on port 9092 (KRaft mode, auto-creates topics)
+- **Kafka UI** on port 8080 — browse topics and inspect messages at http://localhost:8080
 - **mongo-cdc** consuming from MongoDB and publishing to Kafka
 
 ## Configuration
